@@ -1,14 +1,47 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { UnavailableItemProps } from "@howljs/calendar-kit";
+import Animated, { useAnimatedProps } from "react-native-reanimated";
+import Svg, { Defs, Line, Pattern, Rect } from "react-native-svg";
 
-const CustomUnavailableItem = () => {
+const AnimatedRect = Animated.createAnimatedComponent(Rect);
+
+const CustomUnavailableItem = (props) => {
+  const patternSize = 5;
+
+  const rectProps = useAnimatedProps(() => ({
+    height: props.hour * props.timeIntervalHeight.value,
+  }));
   return (
-    <View>
-      <Text>CustomUnavailableItem</Text>
-    </View>
+    <Svg>
+      <Defs>
+        <Pattern
+          id="stripe-pattern"
+          patternUnits="userSpaceOnUse"
+          width={patternSize}
+          height={patternSize}
+          patternTransform="rotate(-45)"
+        >
+          <Line
+            x1={0}
+            y={0}
+            x2={0}
+            y2={patternSize + 5}
+            stroke="#e8e8e8"
+            strokeWidth={1.5}
+            strokeLinecap="butt"
+          />
+        </Pattern>
+      </Defs>
+      <AnimatedRect
+        x="0"
+        y="0"
+        width={props.width}
+        fill="url(#stripe-pattern)"
+        animatedProps={rectProps}
+      />
+    </Svg>
   );
 };
 
 export default CustomUnavailableItem;
-
-const styles = StyleSheet.create({});

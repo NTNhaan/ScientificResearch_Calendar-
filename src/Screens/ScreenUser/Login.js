@@ -28,14 +28,10 @@ import {
 const { brand, darkLight, primary } = Colors;
 import KeyboardAvoidingView from "../../Styles/KeyboardWrapper";
 import { useNavigation } from "@react-navigation/native";
-import HomeScreen from "../ScreenNavigation/HomeScreen";
 const Login = () => {
   const navigattion = useNavigation();
   const [hidePassword, setHidePassword] = useState(true);
 
-  const handleSubmit = () => {
-    <HomeScreen />;
-  };
   return (
     <KeyboardAvoidingView>
       <StyledContainer>
@@ -54,7 +50,7 @@ const Login = () => {
               console.log(values);
             }}
           >
-            {({ handleChange, handleBlur, values }) => (
+            {({ handleChange, handleBlur, handleSubmit, values }) => (
               <StyledFromArea>
                 <MyTextInput
                   label="Email Address"
