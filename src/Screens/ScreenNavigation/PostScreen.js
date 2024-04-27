@@ -32,152 +32,166 @@ import {
 } from "../../Styles/Global";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import * as React from "react";
-
+import { ScrollView } from "react-native-gesture-handler";
 const PostScreen = () => {
   return (
-    <View style={styles.postscreens}>
-      <View style={[styles.contetn, styles.searchLayout1]}>
-        <View style={[styles.view, styles.viewLayout]}>
-          <View style={styles.leftcontent}>
-            <View style={[styles.content, styles.contentLayout]} />
-            <Image
-              style={[styles.howLongDoesAnOrderLast1Icon, styles.contentLayout]}
-              resizeMode="cover"
-              source={require("../../Imgs/Item/images1.png")}
-            />
-          </View>
-          <Text style={[styles.lchThiKha, styles.calendarTypo]}>
-            Lịch Thời Khóa Biểu
-          </Text>
-          <View style={[styles.bottomcontent, styles.bottomcontentLayout]}>
-            <View style={[styles.today, styles.todayPosition]}>
-              <Ionicons
-                name="calendar-outline"
-                size={20}
-                style={styles.iconCalendar}
-              ></Ionicons>
-              <Text style={[styles.vicSpXp, styles.vicSpXpTypo]}>
-                Việc sắp xếp trở nên dễ dàng hơn
-              </Text>
+    <ScrollView>
+      <View style={styles.postscreens}>
+        <View style={[styles.contetn, styles.searchLayout1]}>
+          <View style={[styles.view, styles.viewLayout]}>
+            <View style={styles.leftcontent}>
+              <View style={[styles.content, styles.contentLayout]} />
+              <Image
+                style={[
+                  styles.howLongDoesAnOrderLast1Icon,
+                  styles.contentLayout,
+                ]}
+                resizeMode="cover"
+                source={require("../../Imgs/Item/images1.png")}
+              />
             </View>
-            <Ionicons
-              name="add-outline"
-              size={26}
-              style={[styles.iconPlus, styles.iconLayout]}
-            ></Ionicons>
+            <Text style={[styles.lchThiKha, styles.calendarTypo]}>
+              Lịch Thời Khóa Biểu
+            </Text>
+            <View style={[styles.bottomcontent, styles.bottomcontentLayout]}>
+              <View style={[styles.today, styles.todayPosition]}>
+                <Ionicons
+                  name="calendar-outline"
+                  size={20}
+                  style={styles.iconCalendar}
+                ></Ionicons>
+                <Text style={[styles.vicSpXp, styles.vicSpXpTypo]}>
+                  Việc sắp xếp trở nên dễ dàng hơn
+                </Text>
+              </View>
+              <Ionicons
+                name="add-outline"
+                size={26}
+                style={[styles.iconPlus, styles.iconLayout]}
+              ></Ionicons>
+            </View>
+          </View>
+
+          <View style={[styles.view1, styles.viewLayout]}>
+            <View style={styles.leftcontent}>
+              <View style={[styles.content, styles.contentLayout]} />
+              <Image
+                style={[
+                  styles.howLongDoesAnOrderLast1Icon,
+                  styles.contentLayout,
+                ]}
+                resizeMode="cover"
+                source={require("../../Imgs/Item/images1.png")}
+              />
+            </View>
+            <Text style={[styles.lchThiKha, styles.calendarTypo]}>
+              Lịch Thời Khóa Biểu
+            </Text>
+            <View style={[styles.bottomcontent1, styles.bottomcontentLayout]}>
+              <View style={[styles.today, styles.todayPosition]}>
+                <Ionicons
+                  name="calendar-outline"
+                  size={20}
+                  style={styles.iconCalendar}
+                ></Ionicons>
+                <Text style={[styles.vicSpXp, styles.vicSpXpTypo]}>
+                  Việc sắp xếp trở nên dễ dàng hơn
+                </Text>
+              </View>
+              <Ionicons
+                name="add-outline"
+                size={26}
+                style={[styles.iconPlus, styles.iconLayout]}
+              ></Ionicons>
+            </View>
+          </View>
+
+          <View style={[styles.view2, styles.viewLayout]}>
+            <View style={styles.leftcontent}>
+              <View style={[styles.content, styles.contentLayout]} />
+              <Image
+                style={[
+                  styles.howLongDoesAnOrderLast1Icon,
+                  styles.contentLayout,
+                ]}
+                resizeMode="cover"
+                source={require("../../Imgs/Item/images1.png")}
+              />
+            </View>
+            <Text style={[styles.lchThiKha, styles.calendarTypo]}>
+              Lịch Thời Khóa Biểu
+            </Text>
+            <View style={[styles.bottomcontent2, styles.bottomcontentLayout]}>
+              <View style={[styles.today, styles.todayPosition]}>
+                <Ionicons
+                  name="calendar-outline"
+                  size={20}
+                  style={styles.iconCalendar}
+                ></Ionicons>
+                <Text style={[styles.vicSpXp, styles.vicSpXpTypo]}>
+                  Việc sắp xếp trở nên dễ dàng hơn
+                </Text>
+              </View>
+              <Ionicons
+                name="add-outline"
+                size={26}
+                style={[styles.iconPlus, styles.iconLayout]}
+              ></Ionicons>
+            </View>
+          </View>
+          <View style={[styles.view3, styles.viewLayout]}>
+            <View style={styles.leftcontent}>
+              <View style={[styles.content, styles.contentLayout]} />
+              <Image
+                style={[
+                  styles.howLongDoesAnOrderLast1Icon,
+                  styles.contentLayout,
+                ]}
+                resizeMode="cover"
+                source={require("../../Imgs/Item/images1.png")}
+              />
+            </View>
+            <Text style={[styles.lchThiKha, styles.calendarTypo]}>
+              Lịch Thời Khóa Biểu
+            </Text>
+            <View style={[styles.bottomcontent, styles.bottomcontentLayout]}>
+              <View style={[styles.today, styles.todayPosition]}>
+                <Ionicons
+                  name="calendar-outline"
+                  size={20}
+                  style={styles.iconCalendar}
+                ></Ionicons>
+                <Text style={[styles.vicSpXp, styles.vicSpXpTypo]}>
+                  Việc sắp xếp trở nên dễ dàng hơn
+                </Text>
+              </View>
+              <Ionicons
+                name="add-outline"
+                size={26}
+                style={[styles.iconPlus, styles.iconLayout]}
+              ></Ionicons>
+            </View>
           </View>
         </View>
 
-        <View style={[styles.view1, styles.viewLayout]}>
-          <View style={styles.leftcontent}>
-            <View style={[styles.content, styles.contentLayout]} />
-            <Image
-              style={[styles.howLongDoesAnOrderLast1Icon, styles.contentLayout]}
-              resizeMode="cover"
-              source={require("../../Imgs/Item/images1.png")}
-            />
+        <Text style={[styles.calendar, styles.calendarTypo]}>Calendar</Text>
+        <View style={[styles.search, styles.searchLayout]}>
+          <TextInput
+            style={[styles.textinput, styles.searchLayout]}
+            label="Search"
+            placeholder="Search any thing!"
+            mode="outlined"
+            theme={{ colors: { background: "#46b1ff" } }}
+          />
+          <View style={[styles.wrapperIconSearch, styles.wrapperFlexBox]}>
+            <Ionicons name="search-outline" size={30}></Ionicons>
           </View>
-          <Text style={[styles.lchThiKha, styles.calendarTypo]}>
-            Lịch Thời Khóa Biểu
+          <Text style={[styles.findAnyThing, styles.vicSpXpTypo]}>
+            Find any thing?
           </Text>
-          <View style={[styles.bottomcontent1, styles.bottomcontentLayout]}>
-            <View style={[styles.today, styles.todayPosition]}>
-              <Ionicons
-                name="calendar-outline"
-                size={20}
-                style={styles.iconCalendar}
-              ></Ionicons>
-              <Text style={[styles.vicSpXp, styles.vicSpXpTypo]}>
-                Việc sắp xếp trở nên dễ dàng hơn
-              </Text>
-            </View>
-            <Ionicons
-              name="add-outline"
-              size={26}
-              style={[styles.iconPlus, styles.iconLayout]}
-            ></Ionicons>
-          </View>
-        </View>
-
-        <View style={[styles.view2, styles.viewLayout]}>
-          <View style={styles.leftcontent}>
-            <View style={[styles.content, styles.contentLayout]} />
-            <Image
-              style={[styles.howLongDoesAnOrderLast1Icon, styles.contentLayout]}
-              resizeMode="cover"
-              source={require("../../Imgs/Item/images1.png")}
-            />
-          </View>
-          <Text style={[styles.lchThiKha, styles.calendarTypo]}>
-            Lịch Thời Khóa Biểu
-          </Text>
-          <View style={[styles.bottomcontent2, styles.bottomcontentLayout]}>
-            <View style={[styles.today, styles.todayPosition]}>
-              <Ionicons
-                name="calendar-outline"
-                size={20}
-                style={styles.iconCalendar}
-              ></Ionicons>
-              <Text style={[styles.vicSpXp, styles.vicSpXpTypo]}>
-                Việc sắp xếp trở nên dễ dàng hơn
-              </Text>
-            </View>
-            <Ionicons
-              name="add-outline"
-              size={26}
-              style={[styles.iconPlus, styles.iconLayout]}
-            ></Ionicons>
-          </View>
-        </View>
-        <View style={[styles.view3, styles.viewLayout]}>
-          <View style={styles.leftcontent}>
-            <View style={[styles.content, styles.contentLayout]} />
-            <Image
-              style={[styles.howLongDoesAnOrderLast1Icon, styles.contentLayout]}
-              resizeMode="cover"
-              source={require("../../Imgs/Item/images1.png")}
-            />
-          </View>
-          <Text style={[styles.lchThiKha, styles.calendarTypo]}>
-            Lịch Thời Khóa Biểu
-          </Text>
-          <View style={[styles.bottomcontent, styles.bottomcontentLayout]}>
-            <View style={[styles.today, styles.todayPosition]}>
-              <Ionicons
-                name="calendar-outline"
-                size={20}
-                style={styles.iconCalendar}
-              ></Ionicons>
-              <Text style={[styles.vicSpXp, styles.vicSpXpTypo]}>
-                Việc sắp xếp trở nên dễ dàng hơn
-              </Text>
-            </View>
-            <Ionicons
-              name="add-outline"
-              size={26}
-              style={[styles.iconPlus, styles.iconLayout]}
-            ></Ionicons>
-          </View>
         </View>
       </View>
-
-      <Text style={[styles.calendar, styles.calendarTypo]}>Calendar</Text>
-      <View style={[styles.search, styles.searchLayout]}>
-        <TextInput
-          style={[styles.textinput, styles.searchLayout]}
-          label="Search"
-          placeholder="Search any thing!"
-          mode="outlined"
-          theme={{ colors: { background: "#46b1ff" } }}
-        />
-        <View style={[styles.wrapperIconSearch, styles.wrapperFlexBox]}>
-          <Ionicons name="search-outline" size={30}></Ionicons>
-        </View>
-        <Text style={[styles.findAnyThing, styles.vicSpXpTypo]}>
-          Find any thing?
-        </Text>
-      </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -244,7 +258,7 @@ const styles = StyleSheet.create({
     maxHeight: "100%",
     maxWidth: "100%",
     position: "absolute",
-    overflow: "hidden", 
+    overflow: "hidden",
   },
   searchLayout: {
     borderColor: "black",

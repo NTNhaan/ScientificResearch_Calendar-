@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  TextInput,
+  TouchableOpacity,
+  Alert,
+} from "react-native";
 import { Formik } from "formik";
 import { Octicons, Ionicons, Fontisto } from "@expo/vector-icons";
 import {
@@ -29,15 +36,18 @@ const { brand, darkLight, primary } = Colors;
 import DateTimePicker from "@react-native-community/datetimepicker";
 import KeyboardAvoidingView from "../../Styles/KeyboardWrapper";
 import { useNavigation } from "@react-navigation/native";
+import { Register } from "./utils/authAction";
 
 const Signup = () => {
   const navigattion = useNavigation();
   const [hidePassword, setHidePassword] = useState(true);
   const [show, setShow] = useState(false);
   const [date, setDate] = useState(new Date(2000, 0, 1));
-
   const [dob, setDob] = useState();
 
+  const [isloading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const dispatch = useDispatch();
   const ChangeDate = (event, selectedDate) => {
     const currentDate = selectedDate || date;
     setShow(false);
@@ -47,7 +57,25 @@ const Signup = () => {
   const showDatePicker = () => {
     setShow(true);
   };
-
+  const authHandler = async () => {
+    try {
+      setIsLoading(true);
+      const action = Register(
+        fromState.inputvalues.fullName,
+        fromState.inputvalues.email,
+        fromState.inputvalues.password,
+        fromState.inputvalues.dateOfBirth
+      );
+      await dispatch(action);
+      Alert.alert("Success", "User created successfully");
+      setError(null);
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error);
+      setIsLoading(false);
+      setError(error.message);
+    }
+  };
   return (
     <KeyboardAvoidingView>
       <StyledContainer>

@@ -1,0 +1,3 @@
+[submodule "react-native-calendar-kit"]
+	path = react-native-calendar-kit
+	url = https://github.com/NTNhaan/react-native-calendar-kit.git

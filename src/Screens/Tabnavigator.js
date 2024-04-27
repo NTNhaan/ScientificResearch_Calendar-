@@ -14,13 +14,14 @@ import SettingScreen from "./ScreenNavigation/SettingScreen";
 import Notification from "./ScreenNavigation/Notifications";
 //Screens Func
 import CalendarFunc from "../Function/CalendarFunc";
-import Calendar from "../Function/Test/Screens/Calendar";
+// import Calendar from "../Function/Test/Screens/Calendar";
 import ScheduleTimeTable from "./ScreenNavigation/ScheduleTimeTable";
 import Login from "./ScreenUser/Login";
 import Register from "./ScreenUser/Signup";
 import Welcome from "./ScreenUser/Welcome";
 import { AvatarHeader } from "../Styles/styles"; // avatar
 import TestScrapingWeb from "../Styles/TestScrapingWeb";
+import { Calendar } from "../../react-native-calendar-kit/example/src/screens";
 //ScreensName
 const homeName = "Home";
 const note = "Notification";
@@ -90,6 +91,7 @@ const Tabnavigator = ({ route }) => {
         // ),
       })}
     >
+      <Tab.Screen name="Calendar" component={Calendar} />
       <Tab.Screen name="TestScrapingWeb" component={TestScrapingWeb} />
       <Tab.Screen name={homeName} component={HomeScreen} />
       <Tab.Screen name={note} component={Notification} />
@@ -102,11 +104,11 @@ const Tabnavigator = ({ route }) => {
         component={ScheduleTimeTable}
         options={{ tabBarButton: () => null }}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Calendar"
         component={Calendar}
         options={{ tabBarButton: () => null }}
-      />
+      /> */}
       <Tab.Screen
         name="Login"
         component={Login}
